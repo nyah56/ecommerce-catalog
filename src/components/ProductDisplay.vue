@@ -17,7 +17,6 @@
       </div>
       <div class="card">
         <div v-if="isProductAvailable" class="product-container">
-          
           <!-- asd -->
           <div class="product-thumbnail">
             <img :src="product.data.image" alt="" />
@@ -160,6 +159,7 @@ export default {
       }
 
       let data = await this.fetchAPI();
+      //rating tointegerrounded
       let countRate = Math.round(data.rating.rate);
       this.rating = { countRate };
       // console.log(countRate);
